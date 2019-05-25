@@ -1,10 +1,7 @@
 def get_first_name_of_season_winner(data, season)
-  data[season].each do |people|
-    people.each do |k, v|
-      if v == "winner"
-        full_name = people["name"]
-        full_name.split(' ').first
-      end
+  data[season.to_sym].each do |people|
+    if people[:status] == "winner"
+    return people[:name].split(" ")[0]
     end
   end    # code here
 end
