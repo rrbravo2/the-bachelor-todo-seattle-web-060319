@@ -19,7 +19,7 @@ def count_contestants_by_hometown(data, hometown)
   data.each do |season, stats|
     stats.each do |info|
       if info["hometown"] == hometown
-        return info["occupation"]
+        town += 1
       end
     end
   end# code here
